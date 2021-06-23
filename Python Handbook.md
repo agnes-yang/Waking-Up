@@ -76,22 +76,27 @@ Python中有一个被称为Global Interpreter Lock（GIL）的东西，它会确
 ### GIL的设计初衷?
 <details>
 <summary>展开</summary>
+
 单核时代高效利用CPU, 针对解释器级别的数据安全(不是thread-safe 线程安全)。
 首先需要明确的是GIL并不是Python的特性，它是在实现Python解析器(CPython)时所引入的一个概念。当Python虚拟机的线程想要调用C的原生线程需要知道线程的上下文，因为没有办法控制C的原生线程的执行，所以只能把上下文关系传给原生线程，同理获取结果也是线
 程在python虚拟机这边等待。那么要执行一次计算操作，就必须让执行程序的线程组串行执行。
 </details>
 
+
 ### 为什么要加在解释器,而不是在其他层?
 <details>
 <summary>展开</summary>
+
 GIL锁加在解释器一层，也就是说Python调用的Cython解释器上加了GIL锁，因为你python调用的所有线程都是原生线程。原生线程是通过C语言提供原生接口，相当于C语言的一个函数。你一调它，你就控制不了了它了，就必须等它给你返回结果。只要已通过python虚拟机
 ，再往下就不受python控制了，就是C语言自己控制了。加在Python虚拟机以下加不上去，只能加在Python解释器这一层。
 </details>
+
 
 ### GIL的实现是线程不安全?为什么?
 <details>
 <summary>展开</summary>
 是不安全的，具体情况要分类讨论。
+
 
 单核情况下:
 

@@ -125,7 +125,7 @@ Provided by @[lutherlau](https://github.com/lutherlau)
 </div>
 
 ------
- 
+
 > 这个笔记本的名字来源于电影《Lone Survivor》中的配乐《Waking Up》；在电影中，这段配乐出现的场景，是两名队员在基地外面的大草原上晨跑。
 
 > 电影中我很喜欢的一句话：  

@@ -310,7 +310,6 @@ InnoDB的索引使用的是B+树实现，B+树对比B树的好处：
 
 <details>
 <summary>索引的优化</summary>
-
 注意会引起索引失效的情况，以及在适合的地方建立索引
 </details>
 
