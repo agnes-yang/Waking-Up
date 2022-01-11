@@ -119,6 +119,7 @@
 - 具体工厂类（ Concrete Creator）重写用于创建具体产品类对象的方法。
 #### UML图
 ![image.png](_v_images/1588679646408-22276075-76c2-42b2-8b20-84e3401fdbf7.png#align=left&display=inline&height=231&margin=%5Bobject%20Object%5D&name=image.png&originHeight=381&originWidth=1228&size=220064&status=done&style=none&width=746)
+
 #### 功能及应用场景
 
 - 当需要创建一个类，而在编程时不能确定这个类的类型时（需要运行时确定）。
@@ -261,6 +262,7 @@
 - specificRequest方法：适配对象中能够完成 request方法功能的实现。
 #### UML图
 **![image.png](_v_images/1588761010089-ced9b3a9-3232-4729-943a-67c133909d7c.png#align=left&display=inline&height=395&margin=%5Bobject%20Object%5D&name=image.png&originHeight=395&originWidth=1149&size=182309&status=done&style=none&width=1149)**
+
 #### 功能及应用场景
 在具体实践上，有两种实际应用适配器模式的方法：
 
